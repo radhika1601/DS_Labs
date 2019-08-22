@@ -1,0 +1,174 @@
+\hypertarget{classBinarySearchTree}{}\doxysection{Binary\+Search\+Tree Class Reference}
+\label{classBinarySearchTree}\index{BinarySearchTree@{BinarySearchTree}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBinarySearchTree_a5351a78a161520116785f8eefbb91183}{Binary\+Search\+Tree}} ()
+\item 
+\mbox{\hyperlink{classBinarySearchTree_a7e6fd54bec4c539cfcb8404b1ff3f98d}{$\sim$\+Binary\+Search\+Tree}} ()
+\item 
+void \mbox{\hyperlink{classBinarySearchTree_a132353bd2f2586a6bf04931d4cb954de}{insert\+Node}} (int data)
+\item 
+void \mbox{\hyperlink{classBinarySearchTree_a366d8c073a3ad7d7a0198c45641daa0b}{print\+Tree\+Indent\+Wise}} ()
+\item 
+void \mbox{\hyperlink{classBinarySearchTree_ad202ffa37b22ac34c62b95a8b314f1c5}{print\+Inorder\+Tree\+Traversal}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classBinarySearchTree_abb61a63687e86b6f87215533d5728766}{size}}
+\item 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ \mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 324 of file Q1.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBinarySearchTree_a5351a78a161520116785f8eefbb91183}\label{classBinarySearchTree_a5351a78a161520116785f8eefbb91183}} 
+\index{BinarySearchTree@{BinarySearchTree}!BinarySearchTree@{BinarySearchTree}}
+\index{BinarySearchTree@{BinarySearchTree}!BinarySearchTree@{BinarySearchTree}}
+\doxysubsubsection{\texorpdfstring{BinarySearchTree()}{BinarySearchTree()}}
+{\footnotesize\ttfamily Binary\+Search\+Tree\+::\+Binary\+Search\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 379 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{380         \{}
+\DoxyCodeLine{381             this-\/>\mbox{\hyperlink{classBinarySearchTree_abb61a63687e86b6f87215533d5728766}{size}}=0;}
+\DoxyCodeLine{382             this-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}} = NULL;}
+\DoxyCodeLine{383         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinarySearchTree_a7e6fd54bec4c539cfcb8404b1ff3f98d}\label{classBinarySearchTree_a7e6fd54bec4c539cfcb8404b1ff3f98d}} 
+\index{BinarySearchTree@{BinarySearchTree}!````~BinarySearchTree@{$\sim$BinarySearchTree}}
+\index{````~BinarySearchTree@{$\sim$BinarySearchTree}!BinarySearchTree@{BinarySearchTree}}
+\doxysubsubsection{\texorpdfstring{$\sim$BinarySearchTree()}{~BinarySearchTree()}}
+{\footnotesize\ttfamily Binary\+Search\+Tree\+::$\sim$\+Binary\+Search\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 385 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{386         \{}
+\DoxyCodeLine{387             this-\/>deleteNode(this-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}});}
+\DoxyCodeLine{388         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBinarySearchTree_a132353bd2f2586a6bf04931d4cb954de}\label{classBinarySearchTree_a132353bd2f2586a6bf04931d4cb954de}} 
+\index{BinarySearchTree@{BinarySearchTree}!insertNode@{insertNode}}
+\index{insertNode@{insertNode}!BinarySearchTree@{BinarySearchTree}}
+\doxysubsubsection{\texorpdfstring{insertNode()}{insertNode()}}
+{\footnotesize\ttfamily void Binary\+Search\+Tree\+::insert\+Node (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method insert new node in tree 
+\begin{DoxyParams}{Parameters}
+{\em data} & is int that stores value of node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 394 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{395         \{}
+\DoxyCodeLine{396             \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}} == NULL)}
+\DoxyCodeLine{397                 this-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}} = \textcolor{keyword}{new} \mbox{\hyperlink{classNode}{Node}}(data);}
+\DoxyCodeLine{398             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{399             \{}
+\DoxyCodeLine{400                 \mbox{\hyperlink{classNode}{Node}}* curr = this-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}};}
+\DoxyCodeLine{401                 \mbox{\hyperlink{classNode}{Node}}* parent = this-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}};}
+\DoxyCodeLine{402                 \textcolor{keywordflow}{while}(curr != NULL)}
+\DoxyCodeLine{403                 \{}
+\DoxyCodeLine{404                     parent=curr;}
+\DoxyCodeLine{405                     \textcolor{keywordflow}{if} (data > curr-\/>\mbox{\hyperlink{classNode_ab1d228a881cf7465b2d42ea135781427}{val}})}
+\DoxyCodeLine{406                         curr = curr-\/>\mbox{\hyperlink{classNode_a7328862eaa6dea28018326549b3294d3}{right}};}
+\DoxyCodeLine{407                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{408                         curr = curr-\/>\mbox{\hyperlink{classNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}};}
+\DoxyCodeLine{409                 \}}
+\DoxyCodeLine{410                 \textcolor{keywordflow}{if} (data > parent-\/>\mbox{\hyperlink{classNode_ab1d228a881cf7465b2d42ea135781427}{val}})}
+\DoxyCodeLine{411                     parent-\/>\mbox{\hyperlink{classNode_a7328862eaa6dea28018326549b3294d3}{right}} = \textcolor{keyword}{new} \mbox{\hyperlink{classNode}{Node}}(data);}
+\DoxyCodeLine{412                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{413                     parent-\/>\mbox{\hyperlink{classNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}} = \textcolor{keyword}{new} \mbox{\hyperlink{classNode}{Node}}(data);}
+\DoxyCodeLine{414             \}}
+\DoxyCodeLine{415             this-\/>\mbox{\hyperlink{classBinarySearchTree_abb61a63687e86b6f87215533d5728766}{size}}++;}
+\DoxyCodeLine{416         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinarySearchTree_ad202ffa37b22ac34c62b95a8b314f1c5}\label{classBinarySearchTree_ad202ffa37b22ac34c62b95a8b314f1c5}} 
+\index{BinarySearchTree@{BinarySearchTree}!printInorderTreeTraversal@{printInorderTreeTraversal}}
+\index{printInorderTreeTraversal@{printInorderTreeTraversal}!BinarySearchTree@{BinarySearchTree}}
+\doxysubsubsection{\texorpdfstring{printInorderTreeTraversal()}{printInorderTreeTraversal()}}
+{\footnotesize\ttfamily void Binary\+Search\+Tree\+::print\+Inorder\+Tree\+Traversal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method print tree in inorder Traversal format 
+
+Definition at line 429 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{430         \{}
+\DoxyCodeLine{431             \mbox{\hyperlink{Q1_8cpp_a8cef87ecccd2ef045d7eb3fb00ef1439}{printInorderTree}}(this-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}});}
+\DoxyCodeLine{432             cout << endl;}
+\DoxyCodeLine{433         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinarySearchTree_a366d8c073a3ad7d7a0198c45641daa0b}\label{classBinarySearchTree_a366d8c073a3ad7d7a0198c45641daa0b}} 
+\index{BinarySearchTree@{BinarySearchTree}!printTreeIndentWise@{printTreeIndentWise}}
+\index{printTreeIndentWise@{printTreeIndentWise}!BinarySearchTree@{BinarySearchTree}}
+\doxysubsubsection{\texorpdfstring{printTreeIndentWise()}{printTreeIndentWise()}}
+{\footnotesize\ttfamily void Binary\+Search\+Tree\+::print\+Tree\+Indent\+Wise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method print tree with gaps according to height from root 
+
+Definition at line 421 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{422         \{}
+\DoxyCodeLine{423             this-\/>printTreeIndent(this-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}},0);}
+\DoxyCodeLine{424         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}\label{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}} 
+\index{BinarySearchTree@{BinarySearchTree}!root@{root}}
+\index{root@{root}!BinarySearchTree@{BinarySearchTree}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}}$\ast$ Binary\+Search\+Tree\+::root}
+
+
+
+Definition at line 377 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{classBinarySearchTree_abb61a63687e86b6f87215533d5728766}\label{classBinarySearchTree_abb61a63687e86b6f87215533d5728766}} 
+\index{BinarySearchTree@{BinarySearchTree}!size@{size}}
+\index{size@{size}!BinarySearchTree@{BinarySearchTree}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int Binary\+Search\+Tree\+::size}
+
+
+
+Definition at line 376 of file Q1.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Q1_8cpp}{Q1.\+cpp}}\end{DoxyCompactItemize}

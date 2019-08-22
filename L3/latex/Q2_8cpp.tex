@@ -1,0 +1,342 @@
+\hypertarget{Q2_8cpp}{}\doxysection{Q2.\+cpp File Reference}
+\label{Q2_8cpp}\index{Q2.cpp@{Q2.cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnode}{node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}}~long long int
+\item 
+\#define \mbox{\hyperlink{Q2_8cpp_a6f06beb18324aaa83750f81f7275624a}{mod}}~1000000007
+\item 
+\#define \mbox{\hyperlink{Q2_8cpp_a276c5a0e984cf60015b27252fe04fe6b}{pb}}~push\+\_\+back
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Q2_8cpp_a388f572c62279f839ee138a9afbdeeb5}{print}} ()
+\item 
+int \mbox{\hyperlink{Q2_8cpp_ab20bade1140cd6858a1c8d1700e7f00f}{find\+Max}} (\mbox{\hyperlink{structnode}{node}} $\ast$f)
+\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{Q2_8cpp_a34f9de334b5c10ae7165ed633e5da64c}{insert1}} (int totalxor, int i)
+\item 
+int \mbox{\hyperlink{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+clock\+\_\+t \mbox{\hyperlink{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}}
+\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}{xorlist}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}\label{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}} 
+\index{Q2.cpp@{Q2.cpp}!ll@{ll}}
+\index{ll@{ll}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{ll}{ll}}
+{\footnotesize\ttfamily \#define ll~long long int}
+
+
+
+Definition at line 11 of file Q2.\+cpp.
+
+\mbox{\Hypertarget{Q2_8cpp_a6f06beb18324aaa83750f81f7275624a}\label{Q2_8cpp_a6f06beb18324aaa83750f81f7275624a}} 
+\index{Q2.cpp@{Q2.cpp}!mod@{mod}}
+\index{mod@{mod}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{mod}{mod}}
+{\footnotesize\ttfamily \#define mod~1000000007}
+
+
+
+Definition at line 12 of file Q2.\+cpp.
+
+\mbox{\Hypertarget{Q2_8cpp_a276c5a0e984cf60015b27252fe04fe6b}\label{Q2_8cpp_a276c5a0e984cf60015b27252fe04fe6b}} 
+\index{Q2.cpp@{Q2.cpp}!pb@{pb}}
+\index{pb@{pb}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{pb}{pb}}
+{\footnotesize\ttfamily \#define pb~push\+\_\+back}
+
+
+
+Definition at line 13 of file Q2.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Q2_8cpp_ab20bade1140cd6858a1c8d1700e7f00f}\label{Q2_8cpp_ab20bade1140cd6858a1c8d1700e7f00f}} 
+\index{Q2.cpp@{Q2.cpp}!findMax@{findMax}}
+\index{findMax@{findMax}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{findMax()}{findMax()}}
+{\footnotesize\ttfamily int find\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnode}{node}} $\ast$}]{f }\end{DoxyParamCaption})}
+
+This method find max value of linked list return the max value of list 
+\begin{DoxyParams}{Parameters}
+{\em f} & reads the root node of list \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 117 of file Q2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                     \{}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119     \textcolor{keywordtype}{int} val = f-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}};}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{keywordflow}{while}(f!=NULL)\{}
+\DoxyCodeLine{122         val = max(val,f-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}});}
+\DoxyCodeLine{123         f = f-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{124     \}}
+\DoxyCodeLine{125     \textcolor{keywordflow}{return} val;}
+\DoxyCodeLine{126 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8cpp_a34f9de334b5c10ae7165ed633e5da64c}\label{Q2_8cpp_a34f9de334b5c10ae7165ed633e5da64c}} 
+\index{Q2.cpp@{Q2.cpp}!insert1@{insert1}}
+\index{insert1@{insert1}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{insert1()}{insert1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}} $\ast$ insert1 (\begin{DoxyParamCaption}\item[{int}]{totalxor,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+This method insert totalxor till ith index and in vertical increasing order and then insert i in linked list respective to that node ~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em totalxor} & is the xor of all numbers till ith index \\
+\hline
+{\em i} & is the index of array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file Q2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                   \{}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \mbox{\hyperlink{structnode}{node}} *temp1=\mbox{\hyperlink{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}{xorlist}},*snode;}
+\DoxyCodeLine{78     \textcolor{keywordflow}{while}(temp1!=NULL)\{}
+\DoxyCodeLine{79         \textcolor{keywordflow}{if} (temp1-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} == totalxor)}
+\DoxyCodeLine{80         \{}
+\DoxyCodeLine{81             snode=temp1;}
+\DoxyCodeLine{82             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{83         \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85         \textcolor{keywordflow}{if} (temp1-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}} ==NULL)}
+\DoxyCodeLine{86         \{}
+\DoxyCodeLine{87             temp1-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}} = \textcolor{keyword}{new} \mbox{\hyperlink{structnode}{node}}();}
+\DoxyCodeLine{88             temp1 = temp1-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}};}
+\DoxyCodeLine{89             temp1-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} = totalxor;}
+\DoxyCodeLine{90             snode = temp1;}
+\DoxyCodeLine{91             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{92         \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94         \textcolor{keywordflow}{if} (temp1-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}}-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} > totalxor)}
+\DoxyCodeLine{95         \{}
+\DoxyCodeLine{96             \mbox{\hyperlink{structnode}{node}} *temp = \textcolor{keyword}{new} \mbox{\hyperlink{structnode}{node}}();}
+\DoxyCodeLine{97             temp-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} = totalxor;}
+\DoxyCodeLine{98             temp-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}} = temp1-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}};}
+\DoxyCodeLine{99             temp1-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}} = temp;}
+\DoxyCodeLine{100             snode = temp;}
+\DoxyCodeLine{101             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{102         \}}
+\DoxyCodeLine{103         temp1 = temp1-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}};}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \mbox{\hyperlink{structnode}{node}} *lst = snode;}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108     \textcolor{keywordflow}{while}(lst-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}} != NULL)}
+\DoxyCodeLine{109         lst = lst-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     lst-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}} = \textcolor{keyword}{new} \mbox{\hyperlink{structnode}{node}}();}
+\DoxyCodeLine{112     lst = lst-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{113     lst-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} = i;}
+\DoxyCodeLine{114     \textcolor{keywordflow}{return} snode;}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q2.cpp@{Q2.cpp}!main@{main}}
+\index{main@{main}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+insert 0 as node in vertical list and -\/1 as index in list respective to 0. because totalxor before 0th index is 0.
+
+This stores the node of totalxor of all indexs for lexographical order.
+
+This calculate the number of possible triplets.
+
+This print all triplets in lexographical order
+
+Definition at line 128 of file Q2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{128           \{}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} n;}
+\DoxyCodeLine{131     cout << \textcolor{stringliteral}{"Enter size of Array : "};}
+\DoxyCodeLine{132     cin >> n;}
+\DoxyCodeLine{133     \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} totalxor = 0;}
+\DoxyCodeLine{134     }
+\DoxyCodeLine{135     \mbox{\hyperlink{structnode}{node}} *v,*cv;}
+\DoxyCodeLine{136     v = \textcolor{keyword}{new} \mbox{\hyperlink{structnode}{node}}();}
+\DoxyCodeLine{137     cv = v; }
+\DoxyCodeLine{138 }
+\DoxyCodeLine{144     \mbox{\hyperlink{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}{xorlist}} = \textcolor{keyword}{new} \mbox{\hyperlink{structnode}{node}}();}
+\DoxyCodeLine{145     \mbox{\hyperlink{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}{xorlist}}-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} = 0;}
+\DoxyCodeLine{146     \mbox{\hyperlink{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}{xorlist}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}} = \textcolor{keyword}{new} \mbox{\hyperlink{structnode}{node}}();}
+\DoxyCodeLine{147     \mbox{\hyperlink{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}{xorlist}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}}-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} = -\/1;}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{152     \mbox{\hyperlink{structnode}{node}} * snodes[n];}
+\DoxyCodeLine{153     cout << \textcolor{stringliteral}{"Enter "} << n << \textcolor{stringliteral}{" numbers : "};}
+\DoxyCodeLine{154     \textcolor{keywordflow}{for} (\mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} i = 0; i < n; ++i)}
+\DoxyCodeLine{155     \{}
+\DoxyCodeLine{156         \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} p;}
+\DoxyCodeLine{157         cin >> p;}
+\DoxyCodeLine{158         totalxor = totalxor\string^p;}
+\DoxyCodeLine{159         cv-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} = p;}
+\DoxyCodeLine{160         cv-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}} = \textcolor{keyword}{new} \mbox{\hyperlink{structnode}{node}}();}
+\DoxyCodeLine{161         cv = cv-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}};}
+\DoxyCodeLine{162         snodes[i] = \mbox{\hyperlink{Q2_8cpp_a34f9de334b5c10ae7165ed633e5da64c}{insert1}}(totalxor,i);}
+\DoxyCodeLine{163     \}   }
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165     \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} answer = 0;}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{170     \mbox{\hyperlink{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}} = clock();}
+\DoxyCodeLine{171     \mbox{\hyperlink{structnode}{node}}* temp1 = \mbox{\hyperlink{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}{xorlist}},*temp2;}
+\DoxyCodeLine{172     \textcolor{keywordflow}{while}(temp1!=NULL)\{}
+\DoxyCodeLine{173         temp2 = temp1-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{174         \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} sum1 = temp2-\/>value;}
+\DoxyCodeLine{175         temp2 = temp2-\/>right;}
+\DoxyCodeLine{176         \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} j=1;}
+\DoxyCodeLine{177         \textcolor{keywordflow}{while}(temp2!=NULL)\{}
+\DoxyCodeLine{178             answer += (  (temp2-\/>value)*j -\/ sum1 -\/ j);}
+\DoxyCodeLine{179             sum1 += temp2-\/>value;}
+\DoxyCodeLine{180             temp2 = temp2-\/>right;}
+\DoxyCodeLine{181             j++;}
+\DoxyCodeLine{182         \}}
+\DoxyCodeLine{183         temp1 = temp1-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}};}
+\DoxyCodeLine{184     \}}
+\DoxyCodeLine{185     cout << \textcolor{stringliteral}{"Number of triplets : "} << answer << endl;}
+\DoxyCodeLine{186     \mbox{\hyperlink{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}}=clock()-\/\mbox{\hyperlink{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}};}
+\DoxyCodeLine{187     cout << \textcolor{stringliteral}{"Time: "} << 1000000*((double)\mbox{\hyperlink{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}})/CLOCKS\_PER\_SEC << \textcolor{stringliteral}{" microsec\(\backslash\)n"} << endl;}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{192     \mbox{\hyperlink{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}} = clock();}
+\DoxyCodeLine{193     temp1 = \mbox{\hyperlink{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}{xorlist}};}
+\DoxyCodeLine{194     temp2 = temp1-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{195     temp1-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}} = temp2-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{196     \mbox{\hyperlink{structnode}{node}} * temp3=temp2-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{197     \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} maxno,ff,ll1;}
+\DoxyCodeLine{198     \textcolor{keywordflow}{if} (temp3!=NULL)}
+\DoxyCodeLine{199     \{}
+\DoxyCodeLine{200         maxno = \mbox{\hyperlink{Q2_8cpp_ab20bade1140cd6858a1c8d1700e7f00f}{findMax}}(temp3);}
+\DoxyCodeLine{201         ff = temp2-\/>value+1,ll1 = temp3-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}};}
+\DoxyCodeLine{202         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i1 = ff+1; i1 <= maxno; ++i1)}
+\DoxyCodeLine{203         \{}
+\DoxyCodeLine{204             temp3 = temp2-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{205             \textcolor{keywordflow}{while}(temp3!=NULL)\{}
+\DoxyCodeLine{206                 \textcolor{keywordflow}{if} (temp3-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} >= i1)}
+\DoxyCodeLine{207                 \{}
+\DoxyCodeLine{208                     cout << \textcolor{stringliteral}{"("} << ff+1 << \textcolor{stringliteral}{","} << i1+1 << \textcolor{stringliteral}{","} << temp3-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}+1 << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{209                 \}}
+\DoxyCodeLine{210                 temp3=temp3-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{211             \} }
+\DoxyCodeLine{212         \}}
+\DoxyCodeLine{213     \}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215     \textcolor{keywordflow}{for} (\mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} i = 0; i < n; ++i)}
+\DoxyCodeLine{216     \{}
+\DoxyCodeLine{217         temp1 = snodes[i];}
+\DoxyCodeLine{218         temp2 = temp1-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{219         temp1-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}} = temp2-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{220         temp3 = temp2-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222         \textcolor{keywordflow}{if} (temp3==NULL)}
+\DoxyCodeLine{223         \{}
+\DoxyCodeLine{224             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{225         \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227         \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} maxno = \mbox{\hyperlink{Q2_8cpp_ab20bade1140cd6858a1c8d1700e7f00f}{findMax}}(temp3);}
+\DoxyCodeLine{228         \mbox{\hyperlink{Q2_8cpp_ae1d1ec9482079231e898236e2b23c9ba}{ll}} ff = temp2-\/>value+1,ll1 = temp3-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}};}
+\DoxyCodeLine{229         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i1 = ff+1; i1 <= maxno; ++i1)}
+\DoxyCodeLine{230         \{}
+\DoxyCodeLine{231             temp3 = temp2-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{232             \textcolor{keywordflow}{while}(temp3!=NULL)\{}
+\DoxyCodeLine{233                 \textcolor{keywordflow}{if} (temp3-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} >= i1)}
+\DoxyCodeLine{234                 \{}
+\DoxyCodeLine{235                     cout << \textcolor{stringliteral}{"("} << ff+1 << \textcolor{stringliteral}{","} << i1+1 << \textcolor{stringliteral}{","} << temp3-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}+1 << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{236                 \}}
+\DoxyCodeLine{237                 temp3=temp3-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{238             \} }
+\DoxyCodeLine{239         \}}
+\DoxyCodeLine{240     \}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243     \mbox{\hyperlink{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}}=clock()-\/\mbox{\hyperlink{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}};}
+\DoxyCodeLine{244     cout << \textcolor{stringliteral}{"Time: "} << 1000000*((double)\mbox{\hyperlink{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}})/CLOCKS\_PER\_SEC << \textcolor{stringliteral}{" microsec\(\backslash\)n"} << endl;}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{247 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8cpp_a388f572c62279f839ee138a9afbdeeb5}\label{Q2_8cpp_a388f572c62279f839ee138a9afbdeeb5}} 
+\index{Q2.cpp@{Q2.cpp}!print@{print}}
+\index{print@{print}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method print the whole Linked Linkedlist 
+
+Definition at line 59 of file Q2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59             \{}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \mbox{\hyperlink{structnode}{node}}* temp1 = \mbox{\hyperlink{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}{xorlist}},*temp2;}
+\DoxyCodeLine{62     cout << endl << \textcolor{stringliteral}{"Print Linkedlist"} << endl;}
+\DoxyCodeLine{63     \textcolor{keywordflow}{while}(temp1!=NULL)\{}
+\DoxyCodeLine{64         cout << temp1-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} << \textcolor{stringliteral}{" -\/> "};}
+\DoxyCodeLine{65         temp2 = temp1-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{66         \textcolor{keywordflow}{while}(temp2!=NULL)\{}
+\DoxyCodeLine{67             cout << temp2-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}} << \textcolor{stringliteral}{" "};}
+\DoxyCodeLine{68             temp2 = temp2-\/>right;}
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70         temp1 = temp1-\/>\mbox{\hyperlink{structnode_a8c3f191ddee56260d4bb85b0874052a1}{next}};}
+\DoxyCodeLine{71         cout << endl;}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}\label{Q2_8cpp_a6b5199431d728a2a47474b0b33dd9317}} 
+\index{Q2.cpp@{Q2.cpp}!clk@{clk}}
+\index{clk@{clk}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{clk}{clk}}
+{\footnotesize\ttfamily clock\+\_\+t clk}
+
+
+
+Definition at line 33 of file Q2.\+cpp.
+
+\mbox{\Hypertarget{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}\label{Q2_8cpp_a028b0f162a7f52f74c5c8bb5543b634b}} 
+\index{Q2.cpp@{Q2.cpp}!xorlist@{xorlist}}
+\index{xorlist@{xorlist}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{xorlist}{xorlist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}}$\ast$ xorlist}
+
+
+
+Definition at line 57 of file Q2.\+cpp.
+

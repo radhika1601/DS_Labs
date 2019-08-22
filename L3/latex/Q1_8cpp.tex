@@ -1,0 +1,547 @@
+\hypertarget{Q1_8cpp}{}\doxysection{Q1.\+cpp File Reference}
+\label{Q1_8cpp}\index{Q1.cpp@{Q1.cpp}}
+
+
+this header file will contain all required definitions and basic utilities functions.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRedBlackNode}{Red\+Black\+Node}}
+\item 
+class \mbox{\hyperlink{classRedBlackTree}{Red\+Black\+Tree}}
+\item 
+class \mbox{\hyperlink{classNode}{Node}}
+\item 
+class \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Q1_8cpp_a8d23feea868a983c8c2b661e1e16972f}{R\+ED}}~true
+\item 
+\#define \mbox{\hyperlink{Q1_8cpp_a7b3b25cba33b07c303f3060fe41887f6}{B\+L\+A\+CK}}~false
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{Q1_8cpp_a8cef87ecccd2ef045d7eb3fb00ef1439}{print\+Inorder\+Tree}} (T $\ast$current\+Node)
+\item 
+void \mbox{\hyperlink{Q1_8cpp_a7f9d39f8cecd6bcb70ada2b9e933eb1e}{insert}} ()
+\item 
+void \mbox{\hyperlink{Q1_8cpp_aad48ef2d20e26075fc30b491372aa793}{B\+S\+Ttraverse}} (int $\ast$arr, int \&counter, \mbox{\hyperlink{classNode}{Node}} $\ast$\mbox{\hyperlink{structnode}{node}})
+\item 
+int \mbox{\hyperlink{Q1_8cpp_ac232deb37be141dc34fb8edbb77a5c47}{get\+Balance\+Of\+Node}} (\mbox{\hyperlink{classNode}{Node}} $\ast$N)
+\item 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ \mbox{\hyperlink{Q1_8cpp_abf42d49a393ded07cc520efbc30c4ff2}{insert\+In\+Avl\+Tree}} (\mbox{\hyperlink{classNode}{Node}} $\ast$\mbox{\hyperlink{structnode}{node}}, int data)
+\item 
+void \mbox{\hyperlink{Q1_8cpp_a3f14d03024a50025b68dc716f138a827}{create\+A\+V\+L\+Handler}} ()
+\item 
+void \mbox{\hyperlink{Q1_8cpp_a388f572c62279f839ee138a9afbdeeb5}{print}} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{Q1_8cpp_a7515fd495196acf738bf172e1e03dc7e}{print\+All\+Paths}} (T $\ast$\mbox{\hyperlink{structnode}{node}}, vector$<$ int $>$ vec)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{Q1_8cpp_a9198b61ff3569dbe77df63f0f886d0fc}{print\+All\+Paths\+Helper}} (T $\ast$\mbox{\hyperlink{structnode}{node}})
+\item 
+void \mbox{\hyperlink{Q1_8cpp_af609b8623ce33a0cdd008b6e5068deef}{print\+All\+Paths\+Handler}} ()
+\item 
+void \mbox{\hyperlink{Q1_8cpp_a7b45cd89a975f1ae2b73f7b9607cb9d7}{print\+Tree\+Indent\+Handler}} ()
+\item 
+void \mbox{\hyperlink{Q1_8cpp_adc98a9e15bc0423f44935b1cad42b13c}{menu\+Bar}} ()
+\item 
+int \mbox{\hyperlink{Q1_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+clock\+\_\+t \mbox{\hyperlink{Q1_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}}
+\item 
+\mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}} $\ast$ \mbox{\hyperlink{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}{bst}}
+\item 
+\mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}} $\ast$ \mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}}
+\item 
+\mbox{\hyperlink{classRedBlackTree}{Red\+Black\+Tree}} $\ast$ \mbox{\hyperlink{Q1_8cpp_a4afbe34689f5a8c085ca1f0438139f79}{rbt}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+this header file will contain all required definitions and basic utilities functions. 
+
+\begin{DoxyAuthor}{Author}
+Radhika 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{Q1_8cpp_a7b3b25cba33b07c303f3060fe41887f6}\label{Q1_8cpp_a7b3b25cba33b07c303f3060fe41887f6}} 
+\index{Q1.cpp@{Q1.cpp}!BLACK@{BLACK}}
+\index{BLACK@{BLACK}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{BLACK}{BLACK}}
+{\footnotesize\ttfamily \#define B\+L\+A\+CK~false}
+
+
+
+Definition at line 14 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{Q1_8cpp_a8d23feea868a983c8c2b661e1e16972f}\label{Q1_8cpp_a8d23feea868a983c8c2b661e1e16972f}} 
+\index{Q1.cpp@{Q1.cpp}!RED@{RED}}
+\index{RED@{RED}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{RED}{RED}}
+{\footnotesize\ttfamily \#define R\+ED~true}
+
+
+
+Definition at line 13 of file Q1.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Q1_8cpp_aad48ef2d20e26075fc30b491372aa793}\label{Q1_8cpp_aad48ef2d20e26075fc30b491372aa793}} 
+\index{Q1.cpp@{Q1.cpp}!BSTtraverse@{BSTtraverse}}
+\index{BSTtraverse@{BSTtraverse}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{BSTtraverse()}{BSTtraverse()}}
+{\footnotesize\ttfamily void B\+S\+Ttraverse (\begin{DoxyParamCaption}\item[{int $\ast$}]{arr,  }\item[{int \&}]{counter,  }\item[{\mbox{\hyperlink{classNode}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Definition at line 453 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{454 \{}
+\DoxyCodeLine{455     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structnode}{node}} == NULL)}
+\DoxyCodeLine{456         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{457     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{458     \{}
+\DoxyCodeLine{459         \mbox{\hyperlink{Q1_8cpp_aad48ef2d20e26075fc30b491372aa793}{BSTtraverse}}(arr,counter,\mbox{\hyperlink{structnode}{node}}-\/>left);}
+\DoxyCodeLine{460         arr[counter++] = \mbox{\hyperlink{structnode}{node}}-\/>val;}
+\DoxyCodeLine{461         \mbox{\hyperlink{Q1_8cpp_aad48ef2d20e26075fc30b491372aa793}{BSTtraverse}}(arr,counter,\mbox{\hyperlink{structnode}{node}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}});}
+\DoxyCodeLine{462     \}}
+\DoxyCodeLine{463 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a3f14d03024a50025b68dc716f138a827}\label{Q1_8cpp_a3f14d03024a50025b68dc716f138a827}} 
+\index{Q1.cpp@{Q1.cpp}!createAVLHandler@{createAVLHandler}}
+\index{createAVLHandler@{createAVLHandler}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{createAVLHandler()}{createAVLHandler()}}
+{\footnotesize\ttfamily void create\+A\+V\+L\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 559 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{560 \{}
+\DoxyCodeLine{561     \textcolor{keywordflow}{if} (\mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}} != NULL)}
+\DoxyCodeLine{562     \{}
+\DoxyCodeLine{563         \textcolor{keyword}{delete} \mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}};}
+\DoxyCodeLine{564         \mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}} = \textcolor{keyword}{new} \mbox{\hyperlink{classBinarySearchTree}{BinarySearchTree}}();}
+\DoxyCodeLine{565     \}}
+\DoxyCodeLine{566     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{567         \mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}} = \textcolor{keyword}{new} \mbox{\hyperlink{classBinarySearchTree}{BinarySearchTree}}();}
+\DoxyCodeLine{568 }
+\DoxyCodeLine{569     \textcolor{keywordtype}{int} counter=0;}
+\DoxyCodeLine{570     \textcolor{keywordtype}{int}* traversal = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\mbox{\hyperlink{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}{bst}}-\/>\mbox{\hyperlink{classBinarySearchTree_abb61a63687e86b6f87215533d5728766}{size}}];}
+\DoxyCodeLine{571     \mbox{\hyperlink{Q1_8cpp_aad48ef2d20e26075fc30b491372aa793}{BSTtraverse}}(traversal,counter,\mbox{\hyperlink{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}{bst}}-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}});}
+\DoxyCodeLine{572     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}{bst}}-\/>\mbox{\hyperlink{classBinarySearchTree_abb61a63687e86b6f87215533d5728766}{size}}; i++) }
+\DoxyCodeLine{573         \mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}}-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}} = \mbox{\hyperlink{Q1_8cpp_abf42d49a393ded07cc520efbc30c4ff2}{insertInAvlTree}}(\mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}}-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}}, traversal[i]);}
+\DoxyCodeLine{574 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_ac232deb37be141dc34fb8edbb77a5c47}\label{Q1_8cpp_ac232deb37be141dc34fb8edbb77a5c47}} 
+\index{Q1.cpp@{Q1.cpp}!getBalanceOfNode@{getBalanceOfNode}}
+\index{getBalanceOfNode@{getBalanceOfNode}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{getBalanceOfNode()}{getBalanceOfNode()}}
+{\footnotesize\ttfamily int get\+Balance\+Of\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}} $\ast$}]{N }\end{DoxyParamCaption})}
+
+This method get Balance or difference of height of left and right child 
+\begin{DoxyParams}{Parameters}
+{\em N} & reads the node of red\+Black\+Node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 481 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{481                                \{  }
+\DoxyCodeLine{482     \textcolor{keywordflow}{if} (N == NULL)  }
+\DoxyCodeLine{483         \textcolor{keywordflow}{return} 0;  }
+\DoxyCodeLine{484     \textcolor{keywordflow}{return} getHeightOfNode(N-\/>\mbox{\hyperlink{classNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}) -\/ getHeightOfNode(N-\/>\mbox{\hyperlink{classNode_a7328862eaa6dea28018326549b3294d3}{right}});  }
+\DoxyCodeLine{485 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a7f9d39f8cecd6bcb70ada2b9e933eb1e}\label{Q1_8cpp_a7f9d39f8cecd6bcb70ada2b9e933eb1e}} 
+\index{Q1.cpp@{Q1.cpp}!insert@{insert}}
+\index{insert@{insert}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void insert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method insert new node in both tree 
+
+Definition at line 444 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{445 \{}
+\DoxyCodeLine{446     cout << \textcolor{stringliteral}{"Enter the number to insert"} << endl;}
+\DoxyCodeLine{447     \textcolor{keywordtype}{int} value = 0;}
+\DoxyCodeLine{448     cin >> value;}
+\DoxyCodeLine{449     \mbox{\hyperlink{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}{bst}}-\/>\mbox{\hyperlink{classBinarySearchTree_a132353bd2f2586a6bf04931d4cb954de}{insertNode}}(value);}
+\DoxyCodeLine{450     \mbox{\hyperlink{Q1_8cpp_a4afbe34689f5a8c085ca1f0438139f79}{rbt}}-\/>\mbox{\hyperlink{classRedBlackTree_a650e3a8f17503a8f248879b77a64f22b}{insertNode}}(value);}
+\DoxyCodeLine{451 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_abf42d49a393ded07cc520efbc30c4ff2}\label{Q1_8cpp_abf42d49a393ded07cc520efbc30c4ff2}} 
+\index{Q1.cpp@{Q1.cpp}!insertInAvlTree@{insertInAvlTree}}
+\index{insertInAvlTree@{insertInAvlTree}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{insertInAvlTree()}{insertInAvlTree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}}$\ast$ insert\+In\+Avl\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}} $\ast$}]{node,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+This method insert new node in A\+VL tree 
+\begin{DoxyParams}{Parameters}
+{\em node} & reads the node of \mbox{\hyperlink{classNode}{Node}} \\
+\hline
+{\em data} & as int stores value of node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 525 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{525                                             \{  }
+\DoxyCodeLine{526     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structnode}{node}} == NULL)  }
+\DoxyCodeLine{527         \textcolor{keywordflow}{return}(\textcolor{keyword}{new} \mbox{\hyperlink{classNode}{Node}}(data));  }
+\DoxyCodeLine{528   }
+\DoxyCodeLine{529     \textcolor{keywordflow}{if} (data < node-\/>val)  }
+\DoxyCodeLine{530         \mbox{\hyperlink{structnode}{node}}-\/>left = \mbox{\hyperlink{Q1_8cpp_abf42d49a393ded07cc520efbc30c4ff2}{insertInAvlTree}}(\mbox{\hyperlink{structnode}{node}}-\/>left, data);  }
+\DoxyCodeLine{531     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (data > \mbox{\hyperlink{structnode}{node}}-\/>val)  }
+\DoxyCodeLine{532         \mbox{\hyperlink{structnode}{node}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}} = \mbox{\hyperlink{Q1_8cpp_abf42d49a393ded07cc520efbc30c4ff2}{insertInAvlTree}}(\mbox{\hyperlink{structnode}{node}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}}, data);  }
+\DoxyCodeLine{533     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{534         \textcolor{keywordflow}{return} \mbox{\hyperlink{structnode}{node}};  }
+\DoxyCodeLine{535   }
+\DoxyCodeLine{536     \textcolor{keywordtype}{int} balance = \mbox{\hyperlink{Q1_8cpp_ac232deb37be141dc34fb8edbb77a5c47}{getBalanceOfNode}}(\mbox{\hyperlink{structnode}{node}});  }
+\DoxyCodeLine{537   }
+\DoxyCodeLine{538     \textcolor{keywordflow}{if} (balance > 1 \&\& data < node-\/>left-\/>val)  }
+\DoxyCodeLine{539         \textcolor{keywordflow}{return} rightRotation(\mbox{\hyperlink{structnode}{node}});  }
+\DoxyCodeLine{540   }
+\DoxyCodeLine{541     \textcolor{keywordflow}{if} (balance < -\/1 \&\& data > \mbox{\hyperlink{structnode}{node}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}}-\/>val)  }
+\DoxyCodeLine{542         \textcolor{keywordflow}{return} leftRotation(\mbox{\hyperlink{structnode}{node}});  }
+\DoxyCodeLine{543   }
+\DoxyCodeLine{544     \textcolor{keywordflow}{if} (balance > 1 \&\& data > \mbox{\hyperlink{structnode}{node}}-\/>left-\/>val)  }
+\DoxyCodeLine{545     \{  }
+\DoxyCodeLine{546         \mbox{\hyperlink{structnode}{node}}-\/>left = leftRotation(\mbox{\hyperlink{structnode}{node}}-\/>left);  }
+\DoxyCodeLine{547         \textcolor{keywordflow}{return} rightRotation(\mbox{\hyperlink{structnode}{node}});  }
+\DoxyCodeLine{548     \}  }
+\DoxyCodeLine{549   }
+\DoxyCodeLine{550     \textcolor{keywordflow}{if} (balance < -\/1 \&\& data < node-\/>right-\/>val)  }
+\DoxyCodeLine{551     \{  }
+\DoxyCodeLine{552         \mbox{\hyperlink{structnode}{node}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}} = rightRotation(\mbox{\hyperlink{structnode}{node}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}});  }
+\DoxyCodeLine{553         \textcolor{keywordflow}{return} leftRotation(\mbox{\hyperlink{structnode}{node}});  }
+\DoxyCodeLine{554     \}  }
+\DoxyCodeLine{555   }
+\DoxyCodeLine{556     \textcolor{keywordflow}{return} \mbox{\hyperlink{structnode}{node}};  }
+\DoxyCodeLine{557 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{Q1_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{Q1.cpp@{Q1.cpp}!main@{main}}
+\index{main@{main}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 709 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{710 \{}
+\DoxyCodeLine{711     \mbox{\hyperlink{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}{bst}} = \textcolor{keyword}{new} \mbox{\hyperlink{classBinarySearchTree}{BinarySearchTree}}();}
+\DoxyCodeLine{712     \mbox{\hyperlink{Q1_8cpp_a4afbe34689f5a8c085ca1f0438139f79}{rbt}} = \textcolor{keyword}{new} \mbox{\hyperlink{classRedBlackTree}{RedBlackTree}}();}
+\DoxyCodeLine{713     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})}
+\DoxyCodeLine{714     \{}
+\DoxyCodeLine{715         \mbox{\hyperlink{Q1_8cpp_adc98a9e15bc0423f44935b1cad42b13c}{menuBar}}();}
+\DoxyCodeLine{716     \}}
+\DoxyCodeLine{717 }
+\DoxyCodeLine{718     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{719 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_adc98a9e15bc0423f44935b1cad42b13c}\label{Q1_8cpp_adc98a9e15bc0423f44935b1cad42b13c}} 
+\index{Q1.cpp@{Q1.cpp}!menuBar@{menuBar}}
+\index{menuBar@{menuBar}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{menuBar()}{menuBar()}}
+{\footnotesize\ttfamily void menu\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 661 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{662 \{}
+\DoxyCodeLine{663     cout << endl;}
+\DoxyCodeLine{664     cout << \textcolor{stringliteral}{"1.Insert a node in Both tree"} << endl;}
+\DoxyCodeLine{665     cout << \textcolor{stringliteral}{"2.Create AVL from BST"} << endl;}
+\DoxyCodeLine{666     cout << \textcolor{stringliteral}{"3.Print Inorder traversal of Both tree"} << endl;}
+\DoxyCodeLine{667     cout << \textcolor{stringliteral}{"4.Display all paths in Both tree"} << endl;}
+\DoxyCodeLine{668     cout << \textcolor{stringliteral}{"5.Print Both Tree using level-\/wise Indentation"} << endl;}
+\DoxyCodeLine{669     cout << \textcolor{stringliteral}{"6.Exit this program"} << endl;}
+\DoxyCodeLine{670 }
+\DoxyCodeLine{671     \textcolor{keywordtype}{int} option=0;}
+\DoxyCodeLine{672     cin >> option;}
+\DoxyCodeLine{673     \mbox{\hyperlink{Q1_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}} = clock();}
+\DoxyCodeLine{674     \textcolor{keywordflow}{switch}(option)}
+\DoxyCodeLine{675     \{}
+\DoxyCodeLine{676         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{677             \mbox{\hyperlink{Q1_8cpp_a7f9d39f8cecd6bcb70ada2b9e933eb1e}{insert}}();}
+\DoxyCodeLine{678             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{679 }
+\DoxyCodeLine{680         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{681             \mbox{\hyperlink{Q1_8cpp_a3f14d03024a50025b68dc716f138a827}{createAVLHandler}}();}
+\DoxyCodeLine{682             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{683 }
+\DoxyCodeLine{684         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{685             \mbox{\hyperlink{Q1_8cpp_a388f572c62279f839ee138a9afbdeeb5}{print}}();}
+\DoxyCodeLine{686             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{687 }
+\DoxyCodeLine{688         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{689             \mbox{\hyperlink{Q1_8cpp_af609b8623ce33a0cdd008b6e5068deef}{printAllPathsHandler}}();}
+\DoxyCodeLine{690             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{691 }
+\DoxyCodeLine{692         \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{693             \mbox{\hyperlink{Q1_8cpp_a7b45cd89a975f1ae2b73f7b9607cb9d7}{printTreeIndentHandler}}();}
+\DoxyCodeLine{694             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{695 }
+\DoxyCodeLine{696         \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{697             exit(0);}
+\DoxyCodeLine{698 }
+\DoxyCodeLine{699         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{700             cout << \textcolor{stringliteral}{"Enter a correct option"} << endl;}
+\DoxyCodeLine{701             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{702     \}}
+\DoxyCodeLine{703     \mbox{\hyperlink{Q1_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}}=clock()-\/\mbox{\hyperlink{Q1_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}};}
+\DoxyCodeLine{704     cout << \textcolor{stringliteral}{"Time: "} << 1000000*((double)\mbox{\hyperlink{Q1_8cpp_a6b5199431d728a2a47474b0b33dd9317}{clk}})/CLOCKS\_PER\_SEC << \textcolor{stringliteral}{" microsec\(\backslash\)n"} << endl;}
+\DoxyCodeLine{705 }
+\DoxyCodeLine{706     cout << endl;}
+\DoxyCodeLine{707 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a388f572c62279f839ee138a9afbdeeb5}\label{Q1_8cpp_a388f572c62279f839ee138a9afbdeeb5}} 
+\index{Q1.cpp@{Q1.cpp}!print@{print}}
+\index{print@{print}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method print all three tree in inorder traversal 
+
+Definition at line 580 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{581 \{}
+\DoxyCodeLine{582     cout << endl;}
+\DoxyCodeLine{583     cout << \textcolor{stringliteral}{"The inorder traversal for the BST is"} << endl;}
+\DoxyCodeLine{584     \mbox{\hyperlink{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}{bst}}-\/>\mbox{\hyperlink{classBinarySearchTree_ad202ffa37b22ac34c62b95a8b314f1c5}{printInorderTreeTraversal}}();}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{586     \textcolor{keywordflow}{if}(\mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}} == NULL)}
+\DoxyCodeLine{587         cout << \textcolor{stringliteral}{"The AVL tree hasn't been created yet"} << endl;}
+\DoxyCodeLine{588     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{589     \{}
+\DoxyCodeLine{590         cout << \textcolor{stringliteral}{"The inorder traversal for the AVL tree is "} << endl;}
+\DoxyCodeLine{591         \mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}}-\/>\mbox{\hyperlink{classBinarySearchTree_ad202ffa37b22ac34c62b95a8b314f1c5}{printInorderTreeTraversal}}();}
+\DoxyCodeLine{592     \}}
+\DoxyCodeLine{593 }
+\DoxyCodeLine{594     cout << \textcolor{stringliteral}{"The inorder traversal for the Red-\/Black Tree is"} << endl;}
+\DoxyCodeLine{595     \mbox{\hyperlink{Q1_8cpp_a4afbe34689f5a8c085ca1f0438139f79}{rbt}}-\/>\mbox{\hyperlink{classRedBlackTree_a068955c4346334bde8a4cfd79ca173dc}{printInorderTreeTraversal}}();}
+\DoxyCodeLine{596     }
+\DoxyCodeLine{597 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a7515fd495196acf738bf172e1e03dc7e}\label{Q1_8cpp_a7515fd495196acf738bf172e1e03dc7e}} 
+\index{Q1.cpp@{Q1.cpp}!printAllPaths@{printAllPaths}}
+\index{printAllPaths@{printAllPaths}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{printAllPaths()}{printAllPaths()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void print\+All\+Paths (\begin{DoxyParamCaption}\item[{T $\ast$}]{node,  }\item[{vector$<$ int $>$}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 600 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{601 \{}
+\DoxyCodeLine{602     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structnode}{node}} == NULL)}
+\DoxyCodeLine{603         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{604     vec.push\_back(\mbox{\hyperlink{structnode}{node}}-\/>val);}
+\DoxyCodeLine{605     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structnode}{node}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}} == NULL \&\& \mbox{\hyperlink{structnode}{node}}-\/>left == NULL)}
+\DoxyCodeLine{606     \{}
+\DoxyCodeLine{607         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} it = vec.begin(); it != vec.end(); it++)}
+\DoxyCodeLine{608         \{}
+\DoxyCodeLine{609             \textcolor{keywordflow}{if} (it == vec.begin())}
+\DoxyCodeLine{610                 cout << *it;}
+\DoxyCodeLine{611             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{612                 cout << \textcolor{stringliteral}{"-\/>"} << *it;}
+\DoxyCodeLine{613         \}}
+\DoxyCodeLine{614         cout << endl;}
+\DoxyCodeLine{615     \}}
+\DoxyCodeLine{616     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{617     \{}
+\DoxyCodeLine{618         \mbox{\hyperlink{Q1_8cpp_a7515fd495196acf738bf172e1e03dc7e}{printAllPaths}}(\mbox{\hyperlink{structnode}{node}}-\/>left,vec);}
+\DoxyCodeLine{619         \mbox{\hyperlink{Q1_8cpp_a7515fd495196acf738bf172e1e03dc7e}{printAllPaths}}(\mbox{\hyperlink{structnode}{node}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}},vec);}
+\DoxyCodeLine{620     \}}
+\DoxyCodeLine{621 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_af609b8623ce33a0cdd008b6e5068deef}\label{Q1_8cpp_af609b8623ce33a0cdd008b6e5068deef}} 
+\index{Q1.cpp@{Q1.cpp}!printAllPathsHandler@{printAllPathsHandler}}
+\index{printAllPathsHandler@{printAllPathsHandler}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{printAllPathsHandler()}{printAllPathsHandler()}}
+{\footnotesize\ttfamily void print\+All\+Paths\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 636 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{637 \{}
+\DoxyCodeLine{638     cout << \textcolor{stringliteral}{"For BST : "} << endl;}
+\DoxyCodeLine{639     \mbox{\hyperlink{Q1_8cpp_a9198b61ff3569dbe77df63f0f886d0fc}{printAllPathsHelper}}(\mbox{\hyperlink{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}{bst}}-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}});}
+\DoxyCodeLine{640 }
+\DoxyCodeLine{641     cout << \textcolor{stringliteral}{"For AVL Tree : "} << endl;}
+\DoxyCodeLine{642     \mbox{\hyperlink{Q1_8cpp_a9198b61ff3569dbe77df63f0f886d0fc}{printAllPathsHelper}}(\mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}}-\/>\mbox{\hyperlink{classBinarySearchTree_a4e70a70d78ffb5cad817dec2cb4a7ae8}{root}});}
+\DoxyCodeLine{643 }
+\DoxyCodeLine{644     cout << \textcolor{stringliteral}{"For Red-\/Black Tree : "} << endl;}
+\DoxyCodeLine{645     \mbox{\hyperlink{Q1_8cpp_a9198b61ff3569dbe77df63f0f886d0fc}{printAllPathsHelper}}(\mbox{\hyperlink{Q1_8cpp_a4afbe34689f5a8c085ca1f0438139f79}{rbt}}-\/>\mbox{\hyperlink{classRedBlackTree_ad9596776608375c6aa087f799ba6a083}{root}});}
+\DoxyCodeLine{646 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a9198b61ff3569dbe77df63f0f886d0fc}\label{Q1_8cpp_a9198b61ff3569dbe77df63f0f886d0fc}} 
+\index{Q1.cpp@{Q1.cpp}!printAllPathsHelper@{printAllPathsHelper}}
+\index{printAllPathsHelper@{printAllPathsHelper}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{printAllPathsHelper()}{printAllPathsHelper()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void print\+All\+Paths\+Helper (\begin{DoxyParamCaption}\item[{T $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Definition at line 624 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{625 \{}
+\DoxyCodeLine{626     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structnode}{node}} == NULL)}
+\DoxyCodeLine{627     \{}
+\DoxyCodeLine{628         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{629     \}}
+\DoxyCodeLine{630     vector<int> vec;}
+\DoxyCodeLine{631     \mbox{\hyperlink{Q1_8cpp_a7515fd495196acf738bf172e1e03dc7e}{printAllPaths}}(\mbox{\hyperlink{structnode}{node}},vec);}
+\DoxyCodeLine{632     \mbox{\hyperlink{Q1_8cpp_a9198b61ff3569dbe77df63f0f886d0fc}{printAllPathsHelper}}(\mbox{\hyperlink{structnode}{node}}-\/>left);}
+\DoxyCodeLine{633     \mbox{\hyperlink{Q1_8cpp_a9198b61ff3569dbe77df63f0f886d0fc}{printAllPathsHelper}}(\mbox{\hyperlink{structnode}{node}}-\/>\mbox{\hyperlink{structnode_abdc86d4c8604c481752953af3235fc47}{right}});}
+\DoxyCodeLine{634 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a8cef87ecccd2ef045d7eb3fb00ef1439}\label{Q1_8cpp_a8cef87ecccd2ef045d7eb3fb00ef1439}} 
+\index{Q1.cpp@{Q1.cpp}!printInorderTree@{printInorderTree}}
+\index{printInorderTree@{printInorderTree}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{printInorderTree()}{printInorderTree()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void print\+Inorder\+Tree (\begin{DoxyParamCaption}\item[{T $\ast$}]{current\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{keywordflow}{if} (currentNode == NULL)}
+\DoxyCodeLine{23         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{24     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{25     \{}
+\DoxyCodeLine{26         \mbox{\hyperlink{Q1_8cpp_a8cef87ecccd2ef045d7eb3fb00ef1439}{printInorderTree}}(currentNode-\/>left);}
+\DoxyCodeLine{27         cout << currentNode-\/>val << \textcolor{stringliteral}{" "};}
+\DoxyCodeLine{28         \mbox{\hyperlink{Q1_8cpp_a8cef87ecccd2ef045d7eb3fb00ef1439}{printInorderTree}}(currentNode-\/>right);}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a7b45cd89a975f1ae2b73f7b9607cb9d7}\label{Q1_8cpp_a7b45cd89a975f1ae2b73f7b9607cb9d7}} 
+\index{Q1.cpp@{Q1.cpp}!printTreeIndentHandler@{printTreeIndentHandler}}
+\index{printTreeIndentHandler@{printTreeIndentHandler}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{printTreeIndentHandler()}{printTreeIndentHandler()}}
+{\footnotesize\ttfamily void print\+Tree\+Indent\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 648 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{649 \{}
+\DoxyCodeLine{650     cout << \textcolor{stringliteral}{"For BST : "} << endl;}
+\DoxyCodeLine{651     \mbox{\hyperlink{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}{bst}}-\/>\mbox{\hyperlink{classBinarySearchTree_a366d8c073a3ad7d7a0198c45641daa0b}{printTreeIndentWise}}();}
+\DoxyCodeLine{652 }
+\DoxyCodeLine{653     cout << \textcolor{stringliteral}{"For AVL Tree : "} << endl;}
+\DoxyCodeLine{654     \mbox{\hyperlink{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}{avl}}-\/>\mbox{\hyperlink{classBinarySearchTree_a366d8c073a3ad7d7a0198c45641daa0b}{printTreeIndentWise}}();}
+\DoxyCodeLine{655 }
+\DoxyCodeLine{656     cout << \textcolor{stringliteral}{"For Red-\/Black Tree : "} << endl;}
+\DoxyCodeLine{657     \mbox{\hyperlink{Q1_8cpp_a4afbe34689f5a8c085ca1f0438139f79}{rbt}}-\/>\mbox{\hyperlink{classRedBlackTree_af5e0df94c2be303cfb59a6e1fb64c09a}{printTreeIndentWise}}();}
+\DoxyCodeLine{658 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}\label{Q1_8cpp_a8db7505bcc3dbc5faec04fc36d6825a9}} 
+\index{Q1.cpp@{Q1.cpp}!avl@{avl}}
+\index{avl@{avl}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{avl}{avl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$\ast$ avl}
+
+
+
+Definition at line 437 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}\label{Q1_8cpp_a8ed6ea53bf66e6b615c7c6009c36f383}} 
+\index{Q1.cpp@{Q1.cpp}!bst@{bst}}
+\index{bst@{bst}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{bst}{bst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}}$\ast$ bst}
+
+
+
+Definition at line 436 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{Q1_8cpp_a6b5199431d728a2a47474b0b33dd9317}\label{Q1_8cpp_a6b5199431d728a2a47474b0b33dd9317}} 
+\index{Q1.cpp@{Q1.cpp}!clk@{clk}}
+\index{clk@{clk}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{clk}{clk}}
+{\footnotesize\ttfamily clock\+\_\+t clk}
+
+
+
+Definition at line 16 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{Q1_8cpp_a4afbe34689f5a8c085ca1f0438139f79}\label{Q1_8cpp_a4afbe34689f5a8c085ca1f0438139f79}} 
+\index{Q1.cpp@{Q1.cpp}!rbt@{rbt}}
+\index{rbt@{rbt}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{rbt}{rbt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRedBlackTree}{Red\+Black\+Tree}}$\ast$ rbt}
+
+
+
+Definition at line 438 of file Q1.\+cpp.
+
