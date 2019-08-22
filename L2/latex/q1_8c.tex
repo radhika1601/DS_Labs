@@ -1,0 +1,249 @@
+\hypertarget{q1_8c}{}\doxysection{q1.\+c File Reference}
+\label{q1_8c}\index{q1.c@{q1.c}}
+
+
+this header file will contain all required definitions and basic utilities functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{q1_8c_a4ac50f102145e297fe01890b022e7c68}{get\+\_\+string}} (const char $\ast$fname)
+\item 
+void \mbox{\hyperlink{q1_8c_ac7d42d5d148742f959888e1abd516c7a}{put\+\_\+string}} (const char $\ast$fname, char $\ast$s)
+\item 
+char $\ast$ \mbox{\hyperlink{q1_8c_ab3efa0c96905ae47e2e3d324e09d476b}{transpose}} (char $\ast$s, int n, int a, int b)
+\item 
+char $\ast$ \mbox{\hyperlink{q1_8c_a37a6fc5c1a3f3ca51c4ca640beea23c3}{inverse\+Transpose}} (char $\ast$s, int n, int a, int b)
+\item 
+void \mbox{\hyperlink{q1_8c_a0a635adf82cf2409124b97cbd93af4da}{compare\+\_\+files}} (const char $\ast$fname)
+\item 
+int \mbox{\hyperlink{q1_8c_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+this header file will contain all required definitions and basic utilities functions. 
+
+\begin{DoxyAuthor}{Author}
+Radhika 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{q1_8c_a0a635adf82cf2409124b97cbd93af4da}\label{q1_8c_a0a635adf82cf2409124b97cbd93af4da}} 
+\index{q1.c@{q1.c}!compare\_files@{compare\_files}}
+\index{compare\_files@{compare\_files}!q1.c@{q1.c}}
+\doxysubsubsection{\texorpdfstring{compare\_files()}{compare\_files()}}
+{\footnotesize\ttfamily void compare\+\_\+files (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fname }\end{DoxyParamCaption})}
+
+This method compares the text of the file with the text in output file 
+\begin{DoxyParams}{Parameters}
+{\em s1} & is the string in the input\+File \\
+\hline
+{\em s2} & is the string in the decrypted\+Output File \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 117 of file q1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                                       \{}
+\DoxyCodeLine{118     \textcolor{keywordtype}{char} *s1 = \mbox{\hyperlink{q1_8c_a4ac50f102145e297fe01890b022e7c68}{get\_string}}(fname);}
+\DoxyCodeLine{119     \textcolor{keywordtype}{char}* s2 = \mbox{\hyperlink{q1_8c_a4ac50f102145e297fe01890b022e7c68}{get\_string}}(\textcolor{stringliteral}{"decryptedOutputfile.txt"});}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{int} x = strcmp(s1, s2);}
+\DoxyCodeLine{122     \textcolor{keywordflow}{if}(x == 0)}
+\DoxyCodeLine{123         printf(\textcolor{stringliteral}{"Both files are equivalent.\(\backslash\)n"});}
+\DoxyCodeLine{124     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{125         printf(\textcolor{stringliteral}{"Files have different texts.\(\backslash\)n"});}
+\DoxyCodeLine{126 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q1_8c_a4ac50f102145e297fe01890b022e7c68}\label{q1_8c_a4ac50f102145e297fe01890b022e7c68}} 
+\index{q1.c@{q1.c}!get\_string@{get\_string}}
+\index{get\_string@{get\_string}!q1.c@{q1.c}}
+\doxysubsubsection{\texorpdfstring{get\_string()}{get\_string()}}
+{\footnotesize\ttfamily char $\ast$ get\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fname }\end{DoxyParamCaption})}
+
+This method reads the string in the file 
+\begin{DoxyParams}{Parameters}
+{\em fname} & is the name of the file to be read \\
+\hline
+{\em s\+\_\+} & reads the file line by line \\
+\hline
+{\em s} & is the complete text in the file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file q1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                     \{}
+\DoxyCodeLine{97     FILE *f = fopen(fname, \textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{98     \textcolor{keywordtype}{char}* s = malloc(1000);}
+\DoxyCodeLine{99     \textcolor{keywordtype}{char}* s\_ = malloc(100);}
+\DoxyCodeLine{100     \textcolor{keywordflow}{while}(fgets(s\_, 100, f) != NULL)}
+\DoxyCodeLine{101         strcat(s, s\_);}
+\DoxyCodeLine{102     fclose(f);}
+\DoxyCodeLine{103     free(s\_);}
+\DoxyCodeLine{104     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q1_8c_a37a6fc5c1a3f3ca51c4ca640beea23c3}\label{q1_8c_a37a6fc5c1a3f3ca51c4ca640beea23c3}} 
+\index{q1.c@{q1.c}!inverseTranspose@{inverseTranspose}}
+\index{inverseTranspose@{inverseTranspose}!q1.c@{q1.c}}
+\doxysubsubsection{\texorpdfstring{inverseTranspose()}{inverseTranspose()}}
+{\footnotesize\ttfamily char $\ast$ inverse\+Transpose (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{int}]{n,  }\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+This method decrypts the string using given n, a, b 
+\begin{DoxyParams}{Parameters}
+{\em l} & is the length of encrypted string \\
+\hline
+{\em decrypted} & is the decrypted string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 76 of file q1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                                                      \{}
+\DoxyCodeLine{77     }
+\DoxyCodeLine{78     \textcolor{keywordtype}{int} l = strlen(s);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     l = l + (n -\/ l\%n);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{char}* decrypted = malloc(l);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < l/n; x++) \{}
+\DoxyCodeLine{85         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < n; y++) \{}
+\DoxyCodeLine{86             \textcolor{keywordtype}{int} i = x*n + y;}
+\DoxyCodeLine{87             \textcolor{keywordtype}{int} j = x*n + (a*i+b)\%n;}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89             decrypted[j] = s[i];}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     \textcolor{keywordflow}{return} decrypted;}
+\DoxyCodeLine{94 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q1_8c_abf9e6b7e6f15df4b525a2e7705ba3089}\label{q1_8c_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+\index{q1.c@{q1.c}!main@{main}}
+\index{main@{main}!q1.c@{q1.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file q1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{128                                        \{}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     \textcolor{keywordflow}{if}(argc < 5)}
+\DoxyCodeLine{131         exit(1);}
+\DoxyCodeLine{132     \textcolor{keywordtype}{int} n = atoi(argv[1]);}
+\DoxyCodeLine{133     \textcolor{keywordtype}{int} a = atoi(argv[2]);}
+\DoxyCodeLine{134     \textcolor{keywordtype}{int} b = atoi(argv[3]);}
+\DoxyCodeLine{135     \textcolor{keywordtype}{char} \textcolor{keyword}{const} *fname = argv[4];}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137     \textcolor{keywordflow}{if}(n < 1)}
+\DoxyCodeLine{138         exit(2);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140     \textcolor{keywordtype}{char}* s = \mbox{\hyperlink{q1_8c_a4ac50f102145e297fe01890b022e7c68}{get\_string}}(fname);}
+\DoxyCodeLine{141     s = \mbox{\hyperlink{q1_8c_ab3efa0c96905ae47e2e3d324e09d476b}{transpose}}(s, n, a, b);}
+\DoxyCodeLine{142     \mbox{\hyperlink{q1_8c_ac7d42d5d148742f959888e1abd516c7a}{put\_string}}(\textcolor{stringliteral}{"outputfile.txt"}, s);}
+\DoxyCodeLine{143     s = \mbox{\hyperlink{q1_8c_a37a6fc5c1a3f3ca51c4ca640beea23c3}{inverseTranspose}}(s, n, a, b);}
+\DoxyCodeLine{144     \mbox{\hyperlink{q1_8c_ac7d42d5d148742f959888e1abd516c7a}{put\_string}}(\textcolor{stringliteral}{"decryptedOutputfile.txt"}, s);}
+\DoxyCodeLine{145     \mbox{\hyperlink{q1_8c_a0a635adf82cf2409124b97cbd93af4da}{compare\_files}}(fname);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{148 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q1_8c_ac7d42d5d148742f959888e1abd516c7a}\label{q1_8c_ac7d42d5d148742f959888e1abd516c7a}} 
+\index{q1.c@{q1.c}!put\_string@{put\_string}}
+\index{put\_string@{put\_string}!q1.c@{q1.c}}
+\doxysubsubsection{\texorpdfstring{put\_string()}{put\_string()}}
+{\footnotesize\ttfamily void put\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fname,  }\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+This method writes the string in the file 
+\begin{DoxyParams}{Parameters}
+{\em fname} & is the name of file in which string is to be written \\
+\hline
+{\em s} & is the string to be written \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 108 of file q1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{108                                             \{}
+\DoxyCodeLine{109     }
+\DoxyCodeLine{110     FILE *f = fopen(fname, \textcolor{stringliteral}{"w"});}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     fprintf(f, \textcolor{stringliteral}{"\%s"}, s);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     fclose(f);}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q1_8c_ab3efa0c96905ae47e2e3d324e09d476b}\label{q1_8c_ab3efa0c96905ae47e2e3d324e09d476b}} 
+\index{q1.c@{q1.c}!transpose@{transpose}}
+\index{transpose@{transpose}!q1.c@{q1.c}}
+\doxysubsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily char $\ast$ transpose (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{int}]{n,  }\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+This method encrypts the string using given n, a, b 
+\begin{DoxyParams}{Parameters}
+{\em l} & is the length of the string \\
+\hline
+{\em l\$} & is the length of the encrypted string that is a multiple of n \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file q1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                               \{}
+\DoxyCodeLine{53     }
+\DoxyCodeLine{54     \textcolor{keywordtype}{int} l = strlen(s);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} l\$ = l;}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if}(l\%n != 0) \{}
+\DoxyCodeLine{57         l\$ = l+ (n -\/ l\%n);}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59     \textcolor{keywordtype}{char}* encrypted = malloc(l\$);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < l\$/n; x++) \{}
+\DoxyCodeLine{62         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < n; y++) \{}
+\DoxyCodeLine{63             \textcolor{keywordtype}{int} i = x*n+y;}
+\DoxyCodeLine{64             \textcolor{keywordtype}{int} j = x*n + (a*i+b)\%n;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66             \textcolor{keywordflow}{if}(j < l)}
+\DoxyCodeLine{67                 encrypted[i] = s[j];}
+\DoxyCodeLine{68             \textcolor{keywordflow}{else} }
+\DoxyCodeLine{69                 encrypted[i] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{70         \}}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{keywordflow}{return} encrypted;}
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}

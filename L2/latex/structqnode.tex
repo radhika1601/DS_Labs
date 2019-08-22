@@ -1,0 +1,133 @@
+\hypertarget{structqnode}{}\doxysection{qnode Struct Reference}
+\label{structqnode}\index{qnode@{qnode}}
+
+
+structure for the nodes in Quad\+Tree  
+
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structqnode}{qnode}} $\ast$ \mbox{\hyperlink{structqnode_a2ea2262f8f09318117a162f1633b1939}{nw}}
+\item 
+struct \mbox{\hyperlink{structqnode}{qnode}} $\ast$ \mbox{\hyperlink{structqnode_ace02441913ddcd0515332e4ca39f40e0}{ne}}
+\begin{DoxyCompactList}\small\item\em pointer to north-\/east quadrant \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structqnode}{qnode}} $\ast$ \mbox{\hyperlink{structqnode_a942c5f9d00b9bb6c7f3fb01b6dbe6f56}{sw}}
+\begin{DoxyCompactList}\small\item\em pointer to south-\/west quadrant \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structqnode}{qnode}} $\ast$ \mbox{\hyperlink{structqnode_ac6699fa49ea1a93345ffaac787ba440a}{se}}
+\begin{DoxyCompactList}\small\item\em pointer to south-\/east quadrant \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structqnode_aa9596b30d91babadaf6df9d10a8a7080}{size}}
+\begin{DoxyCompactList}\small\item\em size of the block that it reprsents \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structqnode_ae65200c317d7f08e2a3f7674d3d294c1}{color}}
+\begin{DoxyCompactList}\small\item\em -\/1 grey, 0 white, 1 black \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structqnode_a042ae1bfe90c5030c5671c5002024360}{num}}
+\begin{DoxyCompactList}\small\item\em number assigned to the leaf-\/nodes else 0 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+structure for the nodes in Quad\+Tree 
+
+Definition at line 14 of file M\+A\+T.\+c.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structqnode_ae65200c317d7f08e2a3f7674d3d294c1}\label{structqnode_ae65200c317d7f08e2a3f7674d3d294c1}} 
+\index{qnode@{qnode}!color@{color}}
+\index{color@{color}!qnode@{qnode}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily int qnode\+::color}
+
+
+
+-\/1 grey, 0 white, 1 black 
+
+
+
+Definition at line 26 of file M\+A\+T.\+c.
+
+\mbox{\Hypertarget{structqnode_ace02441913ddcd0515332e4ca39f40e0}\label{structqnode_ace02441913ddcd0515332e4ca39f40e0}} 
+\index{qnode@{qnode}!ne@{ne}}
+\index{ne@{ne}!qnode@{qnode}}
+\doxysubsubsection{\texorpdfstring{ne}{ne}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structqnode}{qnode}}$\ast$ qnode\+::ne}
+
+
+
+pointer to north-\/east quadrant 
+
+
+
+Definition at line 18 of file M\+A\+T.\+c.
+
+\mbox{\Hypertarget{structqnode_a042ae1bfe90c5030c5671c5002024360}\label{structqnode_a042ae1bfe90c5030c5671c5002024360}} 
+\index{qnode@{qnode}!num@{num}}
+\index{num@{num}!qnode@{qnode}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily int qnode\+::num}
+
+
+
+number assigned to the leaf-\/nodes else 0 
+
+
+
+Definition at line 28 of file M\+A\+T.\+c.
+
+\mbox{\Hypertarget{structqnode_a2ea2262f8f09318117a162f1633b1939}\label{structqnode_a2ea2262f8f09318117a162f1633b1939}} 
+\index{qnode@{qnode}!nw@{nw}}
+\index{nw@{nw}!qnode@{qnode}}
+\doxysubsubsection{\texorpdfstring{nw}{nw}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structqnode}{qnode}}$\ast$ qnode\+::nw}
+
+
+
+Definition at line 16 of file M\+A\+T.\+c.
+
+\mbox{\Hypertarget{structqnode_ac6699fa49ea1a93345ffaac787ba440a}\label{structqnode_ac6699fa49ea1a93345ffaac787ba440a}} 
+\index{qnode@{qnode}!se@{se}}
+\index{se@{se}!qnode@{qnode}}
+\doxysubsubsection{\texorpdfstring{se}{se}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structqnode}{qnode}}$\ast$ qnode\+::se}
+
+
+
+pointer to south-\/east quadrant 
+
+
+
+Definition at line 22 of file M\+A\+T.\+c.
+
+\mbox{\Hypertarget{structqnode_aa9596b30d91babadaf6df9d10a8a7080}\label{structqnode_aa9596b30d91babadaf6df9d10a8a7080}} 
+\index{qnode@{qnode}!size@{size}}
+\index{size@{size}!qnode@{qnode}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int qnode\+::size}
+
+
+
+size of the block that it reprsents 
+
+
+
+Definition at line 24 of file M\+A\+T.\+c.
+
+\mbox{\Hypertarget{structqnode_a942c5f9d00b9bb6c7f3fb01b6dbe6f56}\label{structqnode_a942c5f9d00b9bb6c7f3fb01b6dbe6f56}} 
+\index{qnode@{qnode}!sw@{sw}}
+\index{sw@{sw}!qnode@{qnode}}
+\doxysubsubsection{\texorpdfstring{sw}{sw}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structqnode}{qnode}}$\ast$ qnode\+::sw}
+
+
+
+pointer to south-\/west quadrant 
+
+
+
+Definition at line 20 of file M\+A\+T.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MAT_8c}{M\+A\+T.\+c}}\end{DoxyCompactItemize}
