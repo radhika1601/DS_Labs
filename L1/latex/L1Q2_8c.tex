@@ -1,0 +1,393 @@
+\hypertarget{L1Q2_8c}{}\doxysection{L1\+Q2.\+c File Reference}
+\label{L1Q2_8c}\index{L1Q2.c@{L1Q2.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{L1Q2_8c_ad0e4fd8fa6b98fbcd55e62dca65cea01}{printdq}} ()
+\begin{DoxyCompactList}\small\item\em This function print size, filled and all elements of queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{L1Q2_8c_a6f12bc39fff8e91358526cdc70d17c98}{add\+Front}} (int data)
+\begin{DoxyCompactList}\small\item\em this function add a element in front of queue when queue is empty than size assign 1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{L1Q2_8c_aa1939c58acdb9f9073cf5a19e5871dd3}{add\+Back}} (int data)
+\item 
+void \mbox{\hyperlink{L1Q2_8c_a56a3c9c5509ecfd10d09885958a16b05}{remove\+Back}} ()
+\begin{DoxyCompactList}\small\item\em this function remove a element from back of queue when queue is half filled then size redeue to half of its size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{L1Q2_8c_a2e669592316f3b96125656dd603d80fc}{remove\+Front}} ()
+\begin{DoxyCompactList}\small\item\em this function remove a element from front of queue when queue is half filled then size redeue to half of its size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{L1Q2_8c_ad28e2df1b1a69351c1795d14b053ec02}{front\+Element}} ()
+\begin{DoxyCompactList}\small\item\em this function print front element of queue \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{L1Q2_8c_a6a9aba7a1455996db96f4844cd06034d}{back\+Element}} ()
+\begin{DoxyCompactList}\small\item\em this function print back element of queue \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{L1Q2_8c_a2a0e843767aeea4f433a28b9c54f573a}{menu}} ()
+\begin{DoxyCompactList}\small\item\em this function call every time whenever any operatoin is finished. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{L1Q2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em at starting first assign size and filled 0... \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}
+\item 
+int \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}
+\item 
+int \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{L1Q2_8c_aa1939c58acdb9f9073cf5a19e5871dd3}\label{L1Q2_8c_aa1939c58acdb9f9073cf5a19e5871dd3}} 
+\index{L1Q2.c@{L1Q2.c}!addBack@{addBack}}
+\index{addBack@{addBack}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{addBack()}{addBack()}}
+{\footnotesize\ttfamily void add\+Back (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file L1\+Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72     \textcolor{keywordflow}{if} (\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}==0)}
+\DoxyCodeLine{73     \{}
+\DoxyCodeLine{74         \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} = 1;}
+\DoxyCodeLine{75         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}} = (\textcolor{keywordtype}{int}*) malloc(\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{76         \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}= 1;}
+\DoxyCodeLine{77         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[0] = data;}
+\DoxyCodeLine{78         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} > \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}})}
+\DoxyCodeLine{82     \{}
+\DoxyCodeLine{83         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[\mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}] = data;}
+\DoxyCodeLine{84         \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}++;}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} == \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}})}
+\DoxyCodeLine{87     \{}
+\DoxyCodeLine{88         \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} *= 2;}
+\DoxyCodeLine{89         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}} = realloc(\mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}, \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{90         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[\mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}] = data;}
+\DoxyCodeLine{91         \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}++;     }
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{L1Q2_8c_a6f12bc39fff8e91358526cdc70d17c98}\label{L1Q2_8c_a6f12bc39fff8e91358526cdc70d17c98}} 
+\index{L1Q2.c@{L1Q2.c}!addFront@{addFront}}
+\index{addFront@{addFront}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{addFront()}{addFront()}}
+{\footnotesize\ttfamily void add\+Front (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+this function add a element in front of queue when queue is empty than size assign 1 
+
+
+
+Definition at line 33 of file L1\+Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{if} (\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}==0)}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} = 1;}
+\DoxyCodeLine{38         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}} = (\textcolor{keywordtype}{int}*) malloc(\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{39         \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}= 1;}
+\DoxyCodeLine{40         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[0] = data;}
+\DoxyCodeLine{41         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} > \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}})}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}-\/1; i >= 0; i-\/-\/)}
+\DoxyCodeLine{47         \{}
+\DoxyCodeLine{48             \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[i+1] = \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[i];}
+\DoxyCodeLine{49         \}}
+\DoxyCodeLine{50         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[0] = data;}
+\DoxyCodeLine{51         \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}++;}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} == \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}})}
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} *= 2;}
+\DoxyCodeLine{56         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}} = realloc(\mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}, \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{57         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}-\/1; i>=0 ; i-\/-\/)}
+\DoxyCodeLine{58         \{}
+\DoxyCodeLine{59             \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[i+1] = \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[i];}
+\DoxyCodeLine{60         \}       }
+\DoxyCodeLine{61         \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[0] = data;}
+\DoxyCodeLine{62         \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}++;     }
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{L1Q2_8c_a6a9aba7a1455996db96f4844cd06034d}\label{L1Q2_8c_a6a9aba7a1455996db96f4844cd06034d}} 
+\index{L1Q2.c@{L1Q2.c}!backElement@{backElement}}
+\index{backElement@{backElement}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{backElement()}{backElement()}}
+{\footnotesize\ttfamily void back\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function print back element of queue 
+
+
+
+Definition at line 144 of file L1\+Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{144                   \{}
+\DoxyCodeLine{145     \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}} <= 0)}
+\DoxyCodeLine{146         printf(\textcolor{stringliteral}{"Deque is empty\(\backslash\)n"});}
+\DoxyCodeLine{147     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{148     \{}
+\DoxyCodeLine{149         printf(\textcolor{stringliteral}{"\%d\(\backslash\)n"}, \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[\mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}-\/1]);}
+\DoxyCodeLine{150     \}}
+\DoxyCodeLine{151 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{L1Q2_8c_ad28e2df1b1a69351c1795d14b053ec02}\label{L1Q2_8c_ad28e2df1b1a69351c1795d14b053ec02}} 
+\index{L1Q2.c@{L1Q2.c}!frontElement@{frontElement}}
+\index{frontElement@{frontElement}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{frontElement()}{frontElement()}}
+{\footnotesize\ttfamily void front\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function print front element of queue 
+
+
+
+Definition at line 133 of file L1\+Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133                    \{}
+\DoxyCodeLine{134     \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}} <= 0)}
+\DoxyCodeLine{135         printf(\textcolor{stringliteral}{"Deque is empty\(\backslash\)n"});}
+\DoxyCodeLine{136     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{137     \{}
+\DoxyCodeLine{138         printf(\textcolor{stringliteral}{"\%d\(\backslash\)n"}, \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[0]);}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{L1Q2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{L1Q2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{L1Q2.c@{L1Q2.c}!main@{main}}
+\index{main@{main}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+at starting first assign size and filled 0... 
+
+
+
+Definition at line 210 of file L1\+Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{211 \{}
+\DoxyCodeLine{212     \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}} = NULL;}
+\DoxyCodeLine{213     \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} = 0;}
+\DoxyCodeLine{214     \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}= 0;}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216     \textcolor{keywordflow}{while}(1)}
+\DoxyCodeLine{217     \{}
+\DoxyCodeLine{218         \mbox{\hyperlink{L1Q2_8c_a2a0e843767aeea4f433a28b9c54f573a}{menu}}();}
+\DoxyCodeLine{219     \}}
+\DoxyCodeLine{220 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{L1Q2_8c_a2a0e843767aeea4f433a28b9c54f573a}\label{L1Q2_8c_a2a0e843767aeea4f433a28b9c54f573a}} 
+\index{L1Q2.c@{L1Q2.c}!menu@{menu}}
+\index{menu@{menu}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily void menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function call every time whenever any operatoin is finished. 
+
+
+
+Definition at line 155 of file L1\+Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{156 \{}
+\DoxyCodeLine{157     printf(\textcolor{stringliteral}{"Please select from the following choices.\(\backslash\)n"});}
+\DoxyCodeLine{158     printf(\textcolor{stringliteral}{"1. To add element in front.\(\backslash\)n"});}
+\DoxyCodeLine{159     printf(\textcolor{stringliteral}{"2. To add element from back\(\backslash\)n"});}
+\DoxyCodeLine{160     printf(\textcolor{stringliteral}{"3. To remove element from front\(\backslash\)n"});}
+\DoxyCodeLine{161     printf(\textcolor{stringliteral}{"4. To remove element from back\(\backslash\)n"});}
+\DoxyCodeLine{162     printf(\textcolor{stringliteral}{"5. To get the front element\(\backslash\)n"});}
+\DoxyCodeLine{163     printf(\textcolor{stringliteral}{"6. To get the last element\(\backslash\)n"});}
+\DoxyCodeLine{164     printf(\textcolor{stringliteral}{"7. To print the deque\(\backslash\)n\(\backslash\)n"});}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{167     scanf(\textcolor{stringliteral}{"\%d"}, \&i);}
+\DoxyCodeLine{168     \textcolor{keywordflow}{switch}(i)}
+\DoxyCodeLine{169     \{}
+\DoxyCodeLine{170         \textcolor{keywordflow}{case} 1: \{}
+\DoxyCodeLine{171             \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{172             puts(\textcolor{stringliteral}{"Enter the number to insert"});}
+\DoxyCodeLine{173             scanf(\textcolor{stringliteral}{"\%d"}, \&n);}
+\DoxyCodeLine{174             \mbox{\hyperlink{L1Q2_8c_a6f12bc39fff8e91358526cdc70d17c98}{addFront}}(n);}
+\DoxyCodeLine{175             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{176         \}}
+\DoxyCodeLine{177         \textcolor{keywordflow}{case} 2: \{}
+\DoxyCodeLine{178             \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{179             scanf(\textcolor{stringliteral}{"\%d"}, \&n);}
+\DoxyCodeLine{180             puts(\textcolor{stringliteral}{"Enter the number to insert"});}
+\DoxyCodeLine{181             \mbox{\hyperlink{L1Q2_8c_aa1939c58acdb9f9073cf5a19e5871dd3}{addBack}}(n);}
+\DoxyCodeLine{182             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{183         \}}
+\DoxyCodeLine{184         \textcolor{keywordflow}{case} 3: \{}
+\DoxyCodeLine{185             \mbox{\hyperlink{L1Q2_8c_a2e669592316f3b96125656dd603d80fc}{removeFront}}();}
+\DoxyCodeLine{186             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{187         \}}
+\DoxyCodeLine{188         \textcolor{keywordflow}{case} 4:\{}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190             \mbox{\hyperlink{L1Q2_8c_a56a3c9c5509ecfd10d09885958a16b05}{removeBack}}();}
+\DoxyCodeLine{191             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{192         \}}
+\DoxyCodeLine{193         \textcolor{keywordflow}{case} 5:\{ }
+\DoxyCodeLine{194             \mbox{\hyperlink{L1Q2_8c_ad28e2df1b1a69351c1795d14b053ec02}{frontElement}}();}
+\DoxyCodeLine{195             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{196         \}}
+\DoxyCodeLine{197         \textcolor{keywordflow}{case} 6:\{ }
+\DoxyCodeLine{198             \mbox{\hyperlink{L1Q2_8c_a6a9aba7a1455996db96f4844cd06034d}{backElement}}();}
+\DoxyCodeLine{199             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{200         \}}
+\DoxyCodeLine{201         \textcolor{keywordflow}{case} 7:\{ }
+\DoxyCodeLine{202             \mbox{\hyperlink{L1Q2_8c_ad0e4fd8fa6b98fbcd55e62dca65cea01}{printdq}}();}
+\DoxyCodeLine{203             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{204         \}}
+\DoxyCodeLine{205     \}}
+\DoxyCodeLine{206 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{L1Q2_8c_ad0e4fd8fa6b98fbcd55e62dca65cea01}\label{L1Q2_8c_ad0e4fd8fa6b98fbcd55e62dca65cea01}} 
+\index{L1Q2.c@{L1Q2.c}!printdq@{printdq}}
+\index{printdq@{printdq}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{printdq()}{printdq()}}
+{\footnotesize\ttfamily void printdq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function print size, filled and all elements of queue. 
+
+
+
+Definition at line 17 of file L1\+Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     printf(\textcolor{stringliteral}{"The size of deque is \%d\(\backslash\)n"}, \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}});}
+\DoxyCodeLine{20     printf(\textcolor{stringliteral}{"Filled entires are \%d\(\backslash\)n"}, \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}});}
+\DoxyCodeLine{21     printf(\textcolor{stringliteral}{"The entries filled in deque are : "});}
+\DoxyCodeLine{22     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}; ++i)}
+\DoxyCodeLine{23     \{}
+\DoxyCodeLine{24         printf(\textcolor{stringliteral}{"\%d "}, \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[i]);}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"});}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{L1Q2_8c_a56a3c9c5509ecfd10d09885958a16b05}\label{L1Q2_8c_a56a3c9c5509ecfd10d09885958a16b05}} 
+\index{L1Q2.c@{L1Q2.c}!removeBack@{removeBack}}
+\index{removeBack@{removeBack}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{removeBack()}{removeBack()}}
+{\footnotesize\ttfamily void remove\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function remove a element from back of queue when queue is half filled then size redeue to half of its size. 
+
+
+
+Definition at line 99 of file L1\+Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100 \{}
+\DoxyCodeLine{101     \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}} <= 0)}
+\DoxyCodeLine{102         printf(\textcolor{stringliteral}{"Deque is empty\(\backslash\)n"});}
+\DoxyCodeLine{103     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{104     \{}
+\DoxyCodeLine{105         \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}-\/-\/ ;}
+\DoxyCodeLine{106         \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} == \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}*2)}
+\DoxyCodeLine{107             \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} = \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}};}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{L1Q2_8c_a2e669592316f3b96125656dd603d80fc}\label{L1Q2_8c_a2e669592316f3b96125656dd603d80fc}} 
+\index{L1Q2.c@{L1Q2.c}!removeFront@{removeFront}}
+\index{removeFront@{removeFront}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{removeFront()}{removeFront()}}
+{\footnotesize\ttfamily void remove\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function remove a element from front of queue when queue is half filled then size redeue to half of its size. 
+
+
+
+Definition at line 115 of file L1\+Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116 \{}
+\DoxyCodeLine{117     \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}} <= 0)}
+\DoxyCodeLine{118         printf(\textcolor{stringliteral}{"Deque is empty\(\backslash\)n"});}
+\DoxyCodeLine{119     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{120     \{}
+\DoxyCodeLine{121         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}-\/1; ++i)}
+\DoxyCodeLine{122         \{}
+\DoxyCodeLine{123             \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[i] = \mbox{\hyperlink{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}{dq}}[i+1];}
+\DoxyCodeLine{124         \}}
+\DoxyCodeLine{125         \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}-\/-\/;}
+\DoxyCodeLine{126         \textcolor{keywordflow}{if}(\mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} == \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}}*2)}
+\DoxyCodeLine{127             \mbox{\hyperlink{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} = \mbox{\hyperlink{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}{filled}};}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}\label{L1Q2_8c_a51b754f01dab25552c69c499afe320ab}} 
+\index{L1Q2.c@{L1Q2.c}!dq@{dq}}
+\index{dq@{dq}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{dq}{dq}}
+{\footnotesize\ttfamily int$\ast$ dq}
+
+
+
+Definition at line 11 of file L1\+Q2.\+c.
+
+\mbox{\Hypertarget{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}\label{L1Q2_8c_a3e3b491c1a251ff986d5e5536bbd5f15}} 
+\index{L1Q2.c@{L1Q2.c}!filled@{filled}}
+\index{filled@{filled}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{filled}{filled}}
+{\footnotesize\ttfamily int filled}
+
+
+
+Definition at line 12 of file L1\+Q2.\+c.
+
+\mbox{\Hypertarget{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}\label{L1Q2_8c_a439227feff9d7f55384e8780cfc2eb82}} 
+\index{L1Q2.c@{L1Q2.c}!size@{size}}
+\index{size@{size}!L1Q2.c@{L1Q2.c}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int size}
+
+
+
+Definition at line 13 of file L1\+Q2.\+c.
+
