@@ -77,18 +77,19 @@ string getMeaning(string s, struct trie_node* root) {
 void read_file(string filename, struct trie_node* root){
 
 	ifstream file;
-			file.open(filename);
-			if (file.is_open())
-			{
-				string key;
-				while(getline(file,key,','))
-				{
-                    toLowerCase(key);
-					string val;
-					getline(file,val);
-					insert(key,val, root);
-				}
-				file.close();
+	file.open(filename);
+	if (file.is_open())
+	{
+		string key;
+		while(getline(file,key,','))
+		{
+            transform(key.begin(), key.end(), key.begin(), ::tolower);;
+			string val;
+			getline(file,val);
+			insert(key,val, root);
+		}
+		file.close();
+	}
 }
 
 int main(int argc, char const *argv[]) {
@@ -96,5 +97,11 @@ int main(int argc, char const *argv[]) {
 	struct trie_node* root = newTrieNode();
 
 	read_file(argv[1], root);
+
+	string s;
+	cin >> s;
+
+	cout << getMeaning(s, root) << endl;
+
 
 }
