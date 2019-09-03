@@ -74,18 +74,27 @@ string getMeaning(string s, struct trie_node* root) {
 	return "Not Found";
 }
 
+void read_file(string filename, struct trie_node* root){
 
+	ifstream file;
+			file.open(filename);
+			if (file.is_open())
+			{
+				string key;
+				while(getline(file,key,','))
+				{
+                    toLowerCase(key);
+					string val;
+					getline(file,val);
+					insert(key,val, root);
+				}
+				file.close();
+}
 
 int main(int argc, char const *argv[]) {
 
 	struct trie_node* root = newTrieNode();
 
-	// insert("say", "say", root);
-	// insert("apple", "apple", root);
-	// insert("banana", "banana", root);
-	// insert("app", "app", root);
-	// insert("ape", "ape", root);
-	// string meaning_ape = getMeaning("ape", root);
-	// cout <<  meaning_ape << endl;
+	read_file(argv[1], root);
 
 }
