@@ -9,8 +9,8 @@ DictionaryApplication::DictionaryApplication(QWidget *parent) :
     ui(new Ui::DictionaryApplication)
 {
     ui->setupUi(this);
-    dictionary = new Dictionary();
-    dictionary->getFromFile("F:/csn261_assign4/DictionaryApp/L4_P1_input.csv");
+    dictionary = new WordDict();
+    dictionary->insert_from_file("./L4_P1_input.csv");
 }
 
 DictionaryApplication::~DictionaryApplication()

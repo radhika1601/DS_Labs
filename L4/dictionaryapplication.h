@@ -11,7 +11,7 @@ class DictionaryApplication : public QMainWindow
 {
     Q_OBJECT
 public :
-    Dictionary* dictionary;
+    Dictionary* WordDict;
 public:
     explicit DictionaryApplication(QWidget *parent = nullptr);
     ~DictionaryApplication();
