@@ -7,21 +7,24 @@ map<int, int> get_pair_of_indices(int m, int a[], int n) {
 
 	int begin = 0;
 	int sum = a[0];
-	for(int i = 1; i < m; ++i) {
+	while(begin < m){
+	for(int i = begin+1; i < m; ++i) {
 		if(sum == n) {
 			indices.insert(pair<int, int>(begin, i-1));
 			if(begin >= m) return indices;
-			sum = sum-a[begin];
-			begin++;
+			//sum = sum-a[begin];
+			//begin++;
 		}
-		if(sum <= n) {
+		//if(sum <= n) {
 			sum += a[i];
-		}else {
-			sum = sum-a[begin];
-			begin++;
-		}
+		//}else {
+		//	sum = sum-a[begin];
+		//	begin++;
+		//}
 	}
-
+	begin++;
+	sum = a[begin];
+	}
 	return indices;
 }
 

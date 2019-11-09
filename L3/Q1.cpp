@@ -78,12 +78,12 @@ class RedBlackTree
 				for (int i = 0; i < tabGaps; ++i)
 					cout << "\t\t";
 
-				cout << node->val << "[" << abs(getHeightOfNode(node->right)-getHeightOfNode(node->left)) << "]";
-
+				//cout << node->val << "[" << abs(getHeightOfNode(node->right)-getHeightOfNode(node->left)) << "]";
+				string str = to_string(node->val)+"["+to_string( abs(getHeightOfNode(node->right)-getHeightOfNode(node->left)) )+"]";
 				if (node->colour == BLACK)
-					cout << "[BLACK]";
+					cout << "\033[1;34m" << str << "\033[0m\n";
 				else
-					cout << "[RED]";
+					cout << "\033[1;31m"<<str<<"\033[0m\n";
 				cout << endl;
 
 				printTreeIndent(node->left,tabGaps+1);
